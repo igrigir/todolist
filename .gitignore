@@ -1,0 +1,47 @@
+# Symfony / PHP
+/vendor/
+/var/
+/.env.local
+.env.test
+.env.dev
+.env.backup
+.env.*
+!.env
+
+# Cache and logs
+/var/cache/
+/var/log/
+
+# Composer
+composer.lock
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+/phpunit.result.cache
+
+# IDE
+/.idea/
+/*.iml
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Node modules (if JS used)
+/node_modules/
+
+# Public build (Encore)
+/public/build/
+/public/css/*.map
+/public/js/*.map
+
+# SQLite database
+/var/*.db
+*.sqlite
+*.sqlite3
