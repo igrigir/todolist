@@ -68,6 +68,7 @@ class TaskController extends AbstractController
             $task->setIsDone(false);
             $task->setCreatedAt(new \DateTime());
             $task->setPrice((float)$request->request->get('price'));
+            $task->setNorma((float)$request->request->get('norma'));
 
             $em->persist($task);
             $em->flush();
@@ -90,6 +91,7 @@ class TaskController extends AbstractController
             $task->setDescription($request->request->get('description'));
             $task->setIsDone($request->request->get('isDone') === 'on');
             $task->setPrice((float)$request->request->get('price'));
+            $task->setNorma((float)$request->request->get('norma'));
             $em->flush();
 
             return $this->redirectToRoute('task_list');

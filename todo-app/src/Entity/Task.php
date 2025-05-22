@@ -89,6 +89,21 @@ class Task
 
         return $this;
     }
+
+    #[ORM\Column(type: 'float', nullable: true)]
+    private ?float $norma = null;
+
+    public function getNorma(): ?float
+    {
+        return $this->norma;
+    }
+
+    public function setNorma(?float $norma): self
+    {
+        $this->norma = $norma;
+        return $this;
+    }
+
     
     public function getStatus(): int { return $this->status; }
     public function setStatus(int $status): self { $this->status = $status; return $this; }

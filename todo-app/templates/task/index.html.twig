@@ -47,6 +47,7 @@
                     <th>Završeno</th>
                     <th>Trajanje</th>
                     <th>Cijena</th>
+                    <th>Norma</th>
                 </tr>
             </thead>
             <tbody id="taskTable">
@@ -67,6 +68,8 @@
                     <td>{{ task.finishedAt ? task.finishedAt|date('d.m.Y H:i') : '-' }}</td>
                     <td>{{ task.duration ?? '-' }}</td>
                     <td>{{ task.price is defined ? ('%.2f'|format(task.price)) ~ ' KM' : '-' }}</td>
+                    <td>{{ task.norma is defined and task.norma is not null ? ('%.2f'|format(task.norma)) : '-' }}</td>
+
                 </tr>
             {% else %}
                 <tr><td colspan="8" class="text-center">Nema rezultata.</td></tr>

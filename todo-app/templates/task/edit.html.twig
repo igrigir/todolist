@@ -31,6 +31,13 @@
             <input type="number" step="0.01" name="price" id="price" class="form-control" value="{{ task.price }}" required>
         </div>
 
+        <div class="mb-3">
+            <input for = "norma" class = "form-label">Norma</label>
+            <input type="number" step="0.01" name="norma" id="norma" class="form-control" value="{{ task.norma ?? '' }}">
+        
+        </div>
+        
+
         <button type="submit" class="btn btn-primary">Sačuvaj promjene</button>
     </form>
 </div>
